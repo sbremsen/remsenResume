@@ -1,0 +1,90 @@
+<!--Home section -->
+
+<section id='home'>
+
+<!-- News jumbotron -->
+<div class="jumbotron text-center hoverable p-4">
+
+  <!-- Grid row -->
+  <div class="row">
+
+    <!-- Grid column -->
+    <div class="col-md-4 offset-md-1 mx-3 my-3">
+
+      <!-- Featured image -->
+      <div class="view overlay waves-light" mdbWavesEffect>
+        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Sample image for first version of blog listing">
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-md-7 text-md-left ml-3 mt-3">
+
+      <!-- Excerpt -->
+      <a href="#!" style="color: #6c757d!important;">
+        <h6 class="h6 pb-1"><i class="fas fa-project-diagram"></i> {{ title | titlecase}}</h6>
+      </a>
+
+      <h4 class="h4 mb-4">{{ header }}</h4>
+
+      <p class="font-weight-normal">{{ description }}</p>
+      <p class="font-weight-normal">by <a><strong>Scott Remsen</strong></a></p>
+
+      <a mdbBtn color="success" mdbWavesEffect>Read more</a>
+
+    </div>
+    <!-- Grid column -->
+
+  </div>
+  <!-- Grid row -->
+
+  <div class="row" style="margin-top: 30px; margin-left:5px;">
+    <!--Grid column-->
+    <div class="col-md-12 mb-4">
+
+
+      <ul class="list-unstyled">
+        <app-home-tiles></app-home-tiles>
+        <!-- <li class="media animated fadeInRight">
+          <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder7.jpg" alt="Generic placeholder image">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1 font-weight-bold">{{ }}</h5>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+            vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+            congue felis in faucibus.
+          </div>
+        </li>
+        <li class="media my-4 animated rotateInUpRight">
+          <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder6.jpg" alt="Generic placeholder image">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1 font-weight-bold">List-based media object</h5>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+            vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+            congue felis in faucibus.
+          </div>
+        </li> -->
+         <li class="media animated fadeInUp">
+          <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder5.jpg" alt="Generic placeholder image">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1 font-weight-bold">List-based media object</h5>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+            vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+            congue felis in faucibus.
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--Grid column-->
+
+  </div>
+</div>
+<!-- News jumbotron -->
+  <!-- Background image -->
+</section>
+
+

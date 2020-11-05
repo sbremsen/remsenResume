@@ -1,0 +1,11 @@
+<div class="row">
+  <div *ngIf="tiles">
+    <li *ngFor="let tile of tiles" class="media animated {{ tile.animatedStyle }}" style="margin-top:25px;">
+      <img class="d-flex mr-3" [src]="tile.photoUrl" alt="Generic placeholder image">
+      <div class="media-body">
+        <h5 class="mt-0 mb-1 font-weight-bold">{{ tile.title}}</h5>
+        <p> {{ tile.description }}</p>
+      </div>
+    </li>
+  </div>
+</div>
