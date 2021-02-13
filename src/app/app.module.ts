@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,10 +13,9 @@ import { ResumeComponent } from './resume/resume.component';
 // import { EditorModule } from '@tinymce/tinymce-angular';
 import { IdeaListComponent } from './idea-list/idea-list.component';
 import { EventComponent } from './event/event.component';
-import { HomeTilesComponent } from './home-tiles/home-tiles.component';
 // import { WavesModule, ModalModule, CarouselModule } from 'angular-bootstrap-md'
-//import { ScheduleItemComponent } from './scheduleItem/scheduleItem.component';
-// import { CardData } from './models/cardData';
+import { HomeTilesComponent } from './home-tiles/home-tiles.component';
+
 
 @NgModule({
   declarations: [
@@ -28,13 +27,14 @@ import { HomeTilesComponent } from './home-tiles/home-tiles.component';
     ResumeComponent,
     IdeaListComponent,
     EventComponent,
-    HomeTilesComponent,
+    HomeTilesComponent
   //  ScheduleItemComponent,
-   // CardData
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
    // EditorModule,
     MDBBootstrapModule.forRoot(),
     AppRoutingModule
