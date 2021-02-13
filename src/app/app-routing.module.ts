@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'portfolio', component: PortfolioComponent },
-  { path: 'ideas', component: IdeaListComponent },
+  { path: 'events', component: IdeaListComponent },
   { path: '**', redirectTo: '/home' } // default route path
 ];
 

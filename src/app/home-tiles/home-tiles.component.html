@@ -1,9 +1,12 @@
 <div class="row">
   <div *ngIf="tiles">
     <li *ngFor="let tile of tiles" class="media animated {{ tile.animatedStyle }}" style="margin-top:25px;">
-      <img class="d-flex mr-3" [src]="tile.photoUrl" alt="Generic placeholder image">
+      <img class="d-flex mr-3 img-fluid img-thumbnail"  style="width: 150px" [src]="tile.photoUrl" alt="Generic placeholder image">
       <div class="media-body">
         <h5 class="mt-0 mb-1 font-weight-bold">{{ tile.title}}</h5>
+        <div *ngIf="tile.siteUrl">
+          <a target="_blank" [href] = "tile.siteUrl">Click to view</a>
+        </div>
         <p> {{ tile.description }}</p>
       </div>
     </li>

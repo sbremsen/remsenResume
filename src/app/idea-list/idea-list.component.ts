@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import {ModalDirective} from 'angular-bootstrap-md';
 import { CardData } from '../models/cardData';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-idea-list',
@@ -8,8 +9,12 @@ import { CardData } from '../models/cardData';
   styleUrls: ['./idea-list.component.scss']
 })
 export class IdeaListComponent implements OnInit {
- // @ViewChild() modal: ModalDirective;
+  @ViewChild(ModalDirective, null) modal: ModalDirective;
   name = '';
+  timeInput = new FormControl();
+  subjectInput = new FormControl();
+  locationInput = new FormControl();
+  descriptionInput = new FormControl();
   events: Array<any> = [
     {time: '08:00', subject: 'Breakfast with Simon', location: 'Lounge Caffe', description: 'Discuss Q3 targets'},
     {time: '08:30', subject: 'Daily Standup Meeting (recurring)', location: 'Warsaw Spire Office'},
@@ -33,6 +38,24 @@ export class IdeaListComponent implements OnInit {
 
   changeName(){
     this.name = "Johny";
+  }
+
+  addNewEvent() {
+    const newEvent: any = {
+      time: this.timeInput.value,
+      subject: this.subjectInput.value,
+      location: this.locationInput.value,
+      description: this.descriptionInput.value
+    };
+
+    this.events.push(newEvent);
+
+    this.timeInput.setValue('');
+    this.subjectInput.setValue('');
+    this.locationInput.setValue('');
+    this.descriptionInput.setValue('');
+
+    this.modal.hide();
   }
 }
 

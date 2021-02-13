@@ -9,7 +9,7 @@ export interface Schedule {
   location?: string;
   description?: string;
 }
-
+declare var tinymce: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

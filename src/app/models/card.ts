@@ -3,6 +3,7 @@ export interface Card {
   title?: string;
   description?: string;
   photoUrl?: string;
+  siteUrl?: string;
   animatedStyle?: string;
 }
 
