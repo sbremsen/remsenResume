@@ -80,24 +80,69 @@
 
       <!--Body-->
       <div class="modal-body">
-        <div class="modal-body">
-          <input [(ngModel)]="name" #ctrl="ngModel">
-          {{name}}
-          <button (click)="changeName()">Call me Johny</button>
+        <div class="md-form mb-5">
+          <mdb-icon far icon="clock"></mdb-icon>
+          <input
+            type="text"
+            id="time"
+            class="form-control"
+            mdbInput
+            [formControl]="timeInput"
+          />
+          <label for="time" style="margin-top: 10px; margin-left: 20px;">Time</label>
+        </div>
+
+         <div class="md-form">
+          <mdb-icon fas icon="edit"></mdb-icon>
+          <input
+            type="text"
+            id="subject"
+            class="form-control"
+            mdbInput
+            [formControl]="subjectInput"
+          />
+          <label for="subject" style="margin-top: 10px; margin-left: 20px;">Subject</label>
+        </div>
+
+        <div class="md-form mb-5">
+          <mdb-icon far icon="map"></mdb-icon>
+          <input
+            type="text"
+            id="location"
+            class="form-control"
+            mdbInput
+            [formControl]="locationInput"
+          />
+          <label for="location" style="margin-top: 10px; margin-left: 20px;">Location (optional) </label>
+        </div>
+
+        <div class="md-form">
+          <mdb-icon fas icon="sticky-note"></mdb-icon>
+
+          <input
+            type="text"
+            id="description"
+            class="form-control"
+            mdbInput
+            [formControl]="descriptionInput"
+          />
+          <label for="description" style="margin-top: 10px; margin-left: 20px;">Description (optional) </label>
         </div>
       </div>
+      <!--/.Body-->
 
       <!--Footer-->
       <div class="modal-footer justify-content-center">
         <button
-          type="button"
-          mdbBtn
-          color="info"
-          class="waves-effect"
-          mdbWavesEffect
-        >
-          Add
-        </button>
+        type="button"
+        mdbBtn
+        color="info"
+        class="waves-effect"
+        (click)="addNewEvent()"
+        mdbWavesEffect
+      >
+        Add
+      </button>
       </div>
       <!--Footer-->
     </div>
@@ -106,4 +151,3 @@
   <!--/.Dialog-->
 </div>
 <!--/.Modal-->
-Run and test the app
